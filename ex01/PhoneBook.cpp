@@ -1,22 +1,23 @@
-#include "Contact"
-
-class   PhoneBook
-{
-    private:
-        int index[8];
-    public:
-        int add();
-        int search();
-};
+#include "PhoneBook"
 
 int     PhoneBook::add();
 {
-    Contact contact;
+    int     i;
+    Contact tmp;
 
-    contact::add();
-    if (contact::check_field())
-    {
+    i = 0;
+    while (i < 8 && contact[i]::check_field() == 0)
+        i++;
+    i = n % 8;
+    tmp::add();
+    if (tmp::check_field())
         return (1);
-    }
+    n++;
+    contact[i].contactcpy(tmp);
+    return (0);
+}
+
+int PhoneBook::search()
+{
     
 }

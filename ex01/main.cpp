@@ -1,27 +1,26 @@
 #include "PhoneBook"
 
-static int  excute_command(string input)
+static int  excute_command(PhoneBook& phonebook, std::string input)
 {
     if (input == "EXIT")
         return (true);
     if (input == "ADD")
-    {
         PhoneBook::add();
-    }
-    else if (input == "SEARCH")
-    {
+    // else if (input == "SEARCH")
+    // {
         
-    }
+    // }
     return (false);
 }
 
 int main(int argc, char *argv[])
 {
-    string input;
+    PhoneBook   phoneBook;
+    std::string input;
     while (1)
     {
         std::cin >> input;
-        if (excute_command(input))
+        if (excute_command(phonebook, input))
             return (0);
     }
 }

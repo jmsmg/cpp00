@@ -1,54 +1,26 @@
-#include <string>
-#include <iomanip>
+#include "Contact"
 
-class   Contact
+void    Contact::contactcpy(Contact src)
 {
-    private:
-        std::string first_name;
-        std::string last_name;
-        std::string nickname;
-        std::string phone_number;
-        std::string secret;
+    _first_name = src._first_name;
+    _last_name = src._last_name;
+    _nickname = src._nickname;
+    _phone_number = src._phone_number;
+    _secret = src._secret;
+}
 
-    public:
-        int add();
-        int check(string input);
-
-    private:
-        get_input(const std::string& prompt, std::input& input)
-};
-
-int     check_field()
+int     Contact::check_field()
 {
-    if (Contact::first_name == "")
+    if (_first_name.empty() || _last_name.empty()
+        || _nickname.empty() || _phone_number == 0
+        || _secret.empty())
     {
-        std::cout << "first name is null" << std::endl;
-        return (1);
-    }
-    else if (Contact::last_name == "")
-    {
-        std::cout << "last name is null" << std::endl;
-        return (1);
-    }
-    else if (Contact::nickname == "")
-    {
-        std::cout << "nickname is null" << std::endl;
-        return (1);
-    }
-    else if (Contact::phone_number == "")
-    {
-        std::cout << "phone number is null" << std::endl;
-        return (1);
-    }
-    else if (Contact::secret == "")
-    {
-        std::cout << "secret is null" << std::endl;
         return (1);
     }
     return (0);
 }
 
-void    get_input(const std::string& prompt, std::input& input)
+void    Contact::get_input(const std::string& prompt, std::input& input)
 {
     std::cout << prompt << std::endl;
     std::cin >> input;
@@ -56,9 +28,9 @@ void    get_input(const std::string& prompt, std::input& input)
 
 int Contact::add()
 {
-    get_input("Enter first name", Contact::first_name);
-    get_input("Enter last name", Contact::last_name);
-    get_input("Enter nickname", Contact::nickname);
-    get_input("Enter phone number", Contact::phone_number);
-    get_input("Enter secret", Contact::secret);
+    get_input("Enter first name", _first_name);
+    get_input("Enter last name", _last_name);
+    get_input("Enter nickname", _nickname);
+    get_input("Enter phone number", _phone_number);
+    get_input("Enter secret", _secret);
 }
