@@ -1,7 +1,19 @@
-#include "Contact"
 #include "PhoneBook"
-#include <iostream>
-#include <string>
+
+static int  excute_command(string input)
+{
+    if (input == "EXIT")
+        return (true);
+    if (input == "ADD")
+    {
+        PhoneBook::add();
+    }
+    else if (input == "SEARCH")
+    {
+        
+    }
+    return (false);
+}
 
 int main(int argc, char *argv[])
 {
@@ -9,17 +21,7 @@ int main(int argc, char *argv[])
     while (1)
     {
         std::cin >> input;
-        if (input == "ADD")
-        {
-
-        }
-        else if (input == "SEARCH")
-        {
-
-        }
-        else if (input == "EXIT")
-        {
-            break ;
-        }
+        if (excute_command(input))
+            return (0);
     }
 }
