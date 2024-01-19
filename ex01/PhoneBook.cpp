@@ -20,12 +20,22 @@ int	PhoneBook::add()
 int	PhoneBook::search()
 {
 	int	i;
+	int	j;
 
 	i = 0;
 	while (contact[i].check_field() == 0 && !std::cin.eof())
 	{
 		contact[i].print_list(i);
 		i++;
+	}
+	if (i != 0)
+	{
+		std::cout << "Enter the index number" << std::endl;
+		std::cin >> j;
+		if (j < i && !std::cin.eof())
+			contact[i].print_list(i);
+		else
+			std::cout << "index out of range" << std::endl;
 	}
 	return (0);
 }
