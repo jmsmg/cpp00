@@ -22,7 +22,7 @@ int	PhoneBook::search()
 	int	i;
 	int	j;
 
-	i = 0;
+	i = 0; 
 	while (contact[i].check_field() == 0 && !std::cin.eof())
 	{
 		contact[i].print_list(i);
