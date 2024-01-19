@@ -1,8 +1,8 @@
 CC = g++
-FLAG = -Wall -Wextra -Werror -std=c++98
-NAME = megaphone
+FLAG = -Wall -Wextra -Werror
+NAME = phonebook
 OBJS = $(SRCS:.cpp=.o)
-SRCS = megaphone.cpp
+SRCS = main.cpp Contact.cpp PhoneBook.cpp
 
 %.o: %.cpp
 	$(CC) $(FLAG) -o $@ -c $<
