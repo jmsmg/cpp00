@@ -30,12 +30,11 @@ int	PhoneBook::search()
 	}
 	if (i != 0)
 	{
-		std::cout << "Enter the index number" << std::endl;
+		std::cout << "Enter the index number : ";
 		std::cin >> j;
 		if (std::cin.fail())
 		{
 			std::cin.clear();
-			std::cin.ignore(255, '\n');
 			std::cout << "Invalid input. Please enter a valid integer" << std::endl;
 			return (1);
 		}

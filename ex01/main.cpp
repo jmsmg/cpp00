@@ -23,7 +23,7 @@ int main()
 	phonebook.init_index();
 	while (1)
 	{
-		std::cout << "Enter a command" << std::endl;
+		std::cout << "Enter a command : ";
 		std::cin >> input;
 		if (excute_command(phonebook, input))
 			return (1);

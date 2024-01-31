@@ -50,16 +50,16 @@ void	Contact::get_input(const std::string& prompt, std::string& input)
 {
 	if (!std::cin.eof())
 	{
-		std::cout << prompt << std::endl;
+		std::cout << prompt;
 		std::cin >> input;
 	}
 }
 
 void	Contact::add()
 {
-	get_input("Enter first name", _first_name);
-	get_input("Enter last name", _last_name);
-	get_input("Enter nickname", _nickname);
-	get_input("Enter phone number", _phone_number);
-	get_input("Enter darkest secret", _darkest_secret);
+	get_input("Enter first name : ", _first_name);
+	get_input("Enter last name : ", _last_name);
+	get_input("Enter nickname : ", _nickname);
+	get_input("Enter phone number : ", _phone_number);
+	get_input("Enter darkest secret : ", _darkest_secret);
 }
