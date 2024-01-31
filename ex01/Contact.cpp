@@ -51,7 +51,7 @@ void	Contact::get_input(const std::string& prompt, std::string& input)
 	if (!std::cin.eof())
 	{
 		std::cout << prompt;
-		std::cin >> input;
+		std::getline(std::cin, input);;
 	}
 }
 
