@@ -32,8 +32,15 @@ int	PhoneBook::search()
 	{
 		std::cout << "Enter the index number" << std::endl;
 		std::cin >> j;
+		if (std::cin.fail())
+		{
+			std::cin.clear();
+			std::cin.ignore(255, '\n');
+			std::cout << "Invalid input. Please enter a valid integer" << std::endl;
+			return (1);
+		}
 		if (j < i && !std::cin.eof())
-			contact[i].print_list(i);
+			contact[j].print_list(j);
 		else
 			std::cout << "index out of range" << std::endl;
 	}
