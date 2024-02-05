@@ -18,6 +18,7 @@ class	Contact
 		int		check_field();
 		void	contactcpy(Contact src);
 		void	print_list(int i);
+		void	print_column(void);
 
 	private:
 		void	get_input(const std::string& prompt, std::string& input);

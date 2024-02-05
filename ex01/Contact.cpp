@@ -14,6 +14,15 @@ void	Contact::print_column(std::string str)
 		std::cout << std::setw(10) << str;
 }
 
+void	Contact::print_column(void)
+{
+	std::cout << _first_name << std::endl;
+	std::cout << _last_name << std::endl;
+	std::cout << _nickname << std::endl;
+	std::cout << _phone_number << std::endl;
+	std::cout << _darkest_secret << std::endl;
+}
+
 void	Contact::print_list(int i)
 {
 	std::cout << std::setw(10) << i;
@@ -51,7 +60,7 @@ void	Contact::get_input(const std::string& prompt, std::string& input)
 	if (!std::cin.eof())
 	{
 		std::cout << prompt;
-		std::getline(std::cin, input);;
+		std::cin >> input;
 	}
 }
 

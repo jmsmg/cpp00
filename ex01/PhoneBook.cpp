@@ -39,7 +39,7 @@ int	PhoneBook::search()
             std::cout << "Invalid input. Please enter a valid index number." << std::endl;
         }
 		else if (j < i && !std::cin.eof())
-			contact[j].print_list(j);
+			contact[j].print_column();
 		else
 			std::cout << "index out of range" << std::endl;
 	}

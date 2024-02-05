@@ -24,7 +24,7 @@ int main()
 	while (1)
 	{
 		std::cout << "Enter a command : ";
-		std::getline(std::cin, input);
+		std::cin >> input;
 		if (excute_command(phonebook, input))
 			return (1);
 	}
