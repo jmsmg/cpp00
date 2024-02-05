@@ -10,6 +10,8 @@ static int	excute_command(PhoneBook& phonebook, std::string input)
 		phonebook.add();
 	else if (input == "SEARCH")
 		phonebook.search();
+	else
+		std::cout << "wrong command\n";
 	if (std::cin.eof())
 		return (true);
 	return (false);
@@ -24,7 +26,7 @@ int main()
 	while (1)
 	{
 		std::cout << "Enter a command : ";
-		std::cin >> input;
+		std::getline(std::cin, input);
 		if (excute_command(phonebook, input))
 			return (1);
 	}

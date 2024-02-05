@@ -61,6 +61,8 @@ void	Contact::get_input(const std::string& prompt, std::string& input)
 	{
 		std::cout << prompt;
 		std::cin >> input;
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	}
 }
 
